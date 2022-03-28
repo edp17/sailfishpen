@@ -21,7 +21,6 @@ SailfisPen is inspired by Samsung's S-Pen and is created for Sailfish Os.
 
 %prep
 %setup
-%patch0 -p1
 
 %install
 mkdir -p %{buildroot}/usr/bin/droid
