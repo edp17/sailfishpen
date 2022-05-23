@@ -4,7 +4,6 @@ Release:        1
 Summary:        SailfishPen is Samsung's Spen support for Galaxy Note 4.
 License:        GPLv3
 URL:            https://github.com/edp17/sailfishpen
-BuildArch:      armv7hl
 Source0:        %{name}-%{version}.tar.gz
 Source1:        harbour-spen-menu
 Source2:        evtest
@@ -22,7 +21,6 @@ SailfisPen is inspired by Samsung's S-Pen and is created for Sailfish Os.
 
 %prep
 %setup
-%patch0 -p1
 
 %install
 mkdir -p %{buildroot}/usr/bin/droid
@@ -55,7 +53,7 @@ systemctl enable sailfishpen
 %{_bindir}/evtest
 %{_bindir}/droid/sailfishpen-daemon.sh
 %{_bindir}/droid/sailfishpen-start-service.sh
-%{_unitdir}/sailfishpen.service
+%{buildroot}/%{_unitdir}/sailfishpen.service
 %{_datadir}/harbour-spen-menu/qml/harbour-spen-menu.qml
 %{_datadir}/harbour-spen-menu/qml/cover/CoverPage.qml
 %{_datadir}/harbour-spen-menu/qml/pages/Main.qml
