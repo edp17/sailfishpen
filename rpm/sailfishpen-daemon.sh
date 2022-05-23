@@ -46,7 +46,7 @@ spenAppControl()
 EVENT_OUT='*type 5 (EV_SW), code 19 (?), value 1*'
 EVENT_BACK='*type 5 (EV_SW), code 19 (?), value 0*'
 
-$CMD_RUNUSER "/usr/bin/droid/evtest /dev/input/event3" | while read line; do
+$CMD_RUNUSER "/usr/bin/evtest /dev/input/event3" | while read line; do
   case $line in
     ($EVENT_OUT)
     #S-Pen is out
