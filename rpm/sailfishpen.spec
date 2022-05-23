@@ -34,7 +34,7 @@ install -D -m644 %{SOURCE3} %{buildroot}/usr/share/harbour-spen-menu/qml/harbour
 install -D -m644 %{SOURCE4} %{buildroot}/usr/share/harbour-spen-menu/qml/cover/CoverPage.qml
 install -D -m644 %{SOURCE5} %{buildroot}/usr/share/harbour-spen-menu/qml/pages/Main.qml
 install -D -m644 %{SOURCE6} %{buildroot}/usr/share/harbour-spen-menu/qml/pages/About.qml
-install -D -m644 %{SOURCE7} %{buildroot}/%{_unitdir}/sailfishpen.service
+install -D -m644 %{SOURCE7} %{buildroot}/usr/lib/systemd/system/sailfishpen.service
 install -D -m775 %{SOURCE8} %{buildroot}/usr/bin/droid/sailfishpen-daemon.sh
 install -D -m775 %{SOURCE9} %{buildroot}/usr/bin/droid/sailfishpen-start-service.sh
 install -D -m644 %{SOURCE10} %{buildroot}/usr/share/icons/hicolor/86x86/apps/harbour-sailfishpen.png
@@ -53,7 +53,7 @@ systemctl enable sailfishpen
 %{_bindir}/evtest
 %{_bindir}/droid/sailfishpen-daemon.sh
 %{_bindir}/droid/sailfishpen-start-service.sh
-%{buildroot}/%{_unitdir}/sailfishpen.service
+/usr/lib/systemd/system/sailfishpen.service
 %{_datadir}/harbour-spen-menu/qml/harbour-spen-menu.qml
 %{_datadir}/harbour-spen-menu/qml/cover/CoverPage.qml
 %{_datadir}/harbour-spen-menu/qml/pages/Main.qml
